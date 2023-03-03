@@ -1,0 +1,13 @@
+# ref: https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
+name: 'Lingui action'
+description: 'Detect uncommitted changes in some of the .po files'
+runs:
+  using: "composite"
+  steps:
+
+    # get project data and setup node env for lingui cli
+    - uses: actions/setup-node@v3
+
+    # set permissions and run it
+    - run: chmod +x ${{ github.action_path }}/script.sh && ${{ github.action_path }}/script.sh
+      shell: bash

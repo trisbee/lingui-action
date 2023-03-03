@@ -1,0 +1,10 @@
+# IDE
+.idea
+
+# OS
+.DS_Store
+
+# playground
+node_modules
+tmp
+
